@@ -1,25 +1,204 @@
-<!-- projets.html -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes Projets</title>
+    <title>Projets - Mon Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Mes Projets</h1>
-        <nav>
+        <div class="logo">
+            <h3>Portfolio</h3>
+        </div>
+        <nav id="navbar">
             <ul>
                 <li><a href="index.html">Accueil</a></li>
+                <li><a href="a-propos.html">À Propos</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="projets.html" class="active">Projets</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
     </header>
-    <section>
-        <h2>Projets réalisés</h2>
-        <p>Liste de mes projets avec descriptions et liens.</p>
+    
+    <section class="projects-section">
+        <div class="container">
+            <h1 class="page-title">Mes Projets</h1>
+            
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="tous">Tous</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-item" data-category="web">
+                    <div class="project-img">
+                        <img src="/api/placeholder/800/600" alt="Projet 1">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h3>Site E-commerce</h3>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <p>Une plateforme e-commerce complète avec panier, paiement en ligne et gestion des produits.</p>
+                        <a href="#" class="btn-small view-project" data-id="projet1">Voir plus</a>
+                    </div>
+                </div>
+                
+                <div class="project-item" data-category="design">
+                    <div class="project-img">
+                        <img src="/api/placeholder/800/600" alt="Projet 2">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h3>Refonte UI/UX</h3>
+                        <div class="project-tags">
+                            <span>Figma</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <p>Refonte complète de l'interface utilisateur d'une application existante.</p>
+                        <a href="#" class="btn-small view-project" data-id="projet2">Voir plus</a>
+                    </div>
+                </div>
+                
+                <div class="project-item" data-category="mobile">
+                    <div class="project-img">
+                        <img src="/api/placeholder/800/600" alt="Projet 3">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h3>Application Mobile</h3>
+                        <div class="project-tags">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                        </div>
+                        <p>Application mobile de suivi d'habitudes et de gestion de tâches quotidiennes.</p>
+                        <a href="#" class="btn-small view-project" data-id="projet3">Voir plus</a>
+                    </div>
+                </div>
+                
+                <div class="project-item" data-category="web">
+                    <div class="project-img">
+                        <img src="/api/placeholder/800/600" alt="Projet 4">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h3>Dashboard Analytique</h3>
+                        <div class="project-tags">
+                            <span>Vue.js</span>
+                            <span>D3.js</span>
+                            <span>Express</span>
+                        </div>
+                        <p>Dashboard de visualisation de données avec graphiques interactifs et analyses en temps réel.</p>
+                        <a href="#" class="btn-small view-project" data-id="projet4">Voir plus</a>
+                    </div>
+                </div>
+                
+                <div class="project-item" data-category="web">
+                    <div class="project-img">
+                        <img src="/api/placeholder/800/600" alt="Projet 5">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h3>Blog Personnel</h3>
+                        <div class="project-tags">
+                            <span>WordPress</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                        </div>
+                        <p>Blog personnalisé avec système de gestion de contenu sur mesure et design responsive.</p>
+                        <a href="#" class="btn-small view-project" data-id="projet5">Voir plus</a>
+                    </div>
+                </div>
+                
+                <div class="project-item" data-category="design">
+                    <div class="project-img">
+                        <img src="/api/placeholder/800/600" alt="Projet 6">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h3>Identité Visuelle</h3>
+                        <div class="project-tags">
+                            <span>Photoshop</span>
+                            <span>Illustrator</span>
+                        </div>
+                        <p>Création complète de l'identité visuelle d'une startup avec logo, palette de couleurs et guidelines.</p>
+                        <a href="#" class="btn-small view-project" data-id="projet6">Voir plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <!-- Modal pour afficher les détails du projet -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-content-container">
+                <!-- Le contenu sera chargé dynamiquement -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Portfolio</h3>
+                    <p>© 2025 Tous droits réservés</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="mailto:votre.email@example.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
